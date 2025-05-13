@@ -40,7 +40,7 @@ const store = MongoStore.create({  //Multiple option that we can use within it s
 
     // Advance options
     crypto:{
-        secret: process.env.secret
+        secret: process.env.SECRET
     },
 
     // 3rd option: touchAfter :- it is basically the interval between the session updates
@@ -53,7 +53,7 @@ store.on("error",()=>{
 
 const sessionConfig = {
     store, // mongo session info 
-    secret: process.env.secret,
+    secret: process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
